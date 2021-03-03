@@ -4,16 +4,19 @@
 
 import React from "react";
 import { name, age, person } from "./data";
+import Banner from './component/Header/Banner'
 
 const App = () => {
   return (
+    <>
     <section>
+    <Banner/>
       <p>this is my content</p>
       <p>{name}</p>
       <p>{age}</p>
       <p>{person.name}</p>
-      
     </section>
+    </>
   );
 };
 
