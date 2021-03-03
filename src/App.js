@@ -1,23 +1,40 @@
-import React from 'react';
+// named and default import/export
+// only one default export module
+// think of module as file
 
-
-
-
-
-
-
-
-
-
-
-
+import React from "react";
+import { name, age, person } from "./data";
 
 const App = () => {
   return (
     <section>
       <p>this is my content</p>
+      <p>{name}</p>
+      <p>{age}</p>
+      <p>{person.name}</p>
+      
     </section>
   );
 };
+
+// import calej daty
+// import * as data from './data'
+// const App = () => {
+//   return (
+//     <section>
+//       <p>this is my content</p>
+//       <p>{data.name}</p>
+//       <p>{data.age}</p>
+//       <p>{data.person.name}</p>
+//     </section>
+//   );
+// };
+
+
+
+
+
+
+
 
 export default App;
