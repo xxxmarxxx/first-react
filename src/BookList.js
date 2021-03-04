@@ -13,8 +13,12 @@ class BookList extends Component {
   //   };
   // this.setState({})
 
-  handleDelete = () => {
-    console.log(`I'm from parent component`);
+  handleDelete = (id) => {
+    console.log(this.state.books);
+    const sortedBooks = this.state.books.filter((item) => item.id !== id);
+    this.setState({
+      books: sortedBooks,
+    });
   };
 
   render() {
@@ -26,9 +30,13 @@ class BookList extends Component {
     // reduce
     return (
       <section>
-        <h3>This is our BookList</h3>
+        <h2>This is our BookList</h2>
         {this.state.books.map((item) => (
-          <Book key={item.id} info={item} handleDelete={this.handleDelete}></Book>
+          <Book
+            key={item.id}
+            info={item}
+            handleDelete={this.handleDelete}
+          ></Book>
         ))}
       </section>
     );
