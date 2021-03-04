@@ -15,14 +15,15 @@
 // props = read only - rekwizyty = tylko do odczytu
 
 import React from "react";
-import "./index.css";
+// import "./index.css";
 import BookList from "./BookList"
+import "./App.css";
 // import { render } from "@testing-library/react";
 
 const App = () => {
   return (
     <section>
-      <h1>This is our Application</h1>
+      {/* <h1>This is our Application</h1> */}
       <BookList/>
     </section>
   );
