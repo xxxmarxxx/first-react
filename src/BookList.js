@@ -1,17 +1,22 @@
 import React, { Component } from "react";
 import Book from "./Book";
-import BookData from './BookData';
+import BookData from "./BookData";
 class BookList extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            books: BookData
-        }
-    }
-//   state = {
-    
-//   };
+  constructor(props) {
+    super(props);
+    this.state = {
+      books: BookData,
+    };
+  }
+  //   state = {
+
+  //   };
   // this.setState({})
+
+  handleDelete = () => {
+    console.log(`I'm from parent component`);
+  };
+
   render() {
     // const books = this.state.books.map((item) => item.book);
     // console.log(books);
@@ -23,7 +28,7 @@ class BookList extends Component {
       <section>
         <h3>This is our BookList</h3>
         {this.state.books.map((item) => (
-          <Book key={item.id} info={item}></Book>
+          <Book key={item.id} info={item} handleDelete={this.handleDelete}></Book>
         ))}
       </section>
     );
