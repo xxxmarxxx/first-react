@@ -6,13 +6,32 @@ class Book extends Component {
     this.state = {
       count: 1,
       name: "john",
+      showInfo: false,
     };
   }
 
+  handleInfo = () => {
+    this.setState({
+      showInfo: !this.state.showInfo,
+    });
+  };
+
   render() {
     const { id, img, title, author } = this.props.info;
-    const { handleDelete } = this.props;
-    
+
+    const checkInfo = (info) => {
+      if (info === true) {
+        return (
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consequatur repellat{" "}
+          </p>
+        );
+      } else {
+        return null;
+      }
+    };
+
     return (
       <article className="book">
         <img src={img} width="150" alt="book" />
@@ -20,9 +39,22 @@ class Book extends Component {
           <h4>Titel : {title}</h4>
           <h6 className="author">Author : {author} </h6>
 
-          <button type="button" className="btn" onClick={()=>handleDelete(id)}>
-            delete me
+          <button type="button" className="btn" onClick={this.handleInfo}>
+            toggle info
           </button>
+          {checkInfo(this.state.showInfo)}
+
+          {/* ternary operator */}
+          {/* {this.state.showInfo? <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p> : null} */}
+          {/* and */}
+          {/* {this.state.showInfo && (
+            <p style={{ width: "700px" }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Non perspiciatis laboriosam nemo sed eius odio eaque recusandae
+              corrupti aliquid pariatur aperiam consequatur, voluptatum
+              delectus, esse eos molestias perferendis quibusdam mollitia?
+            </p>
+          )} */}
         </div>
       </article>
     );
