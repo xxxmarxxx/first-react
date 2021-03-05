@@ -1,4 +1,5 @@
 import React from "react";
+import img from '../assets/img.png'
 
 class Header extends React.Component {
   state = {
@@ -51,13 +52,14 @@ const Footer = (props) => (
 
 // componet funkcyjna
 const App = () => {
-  const [text, setText] = React.useState("");
+  const [text, setText] = React.useState('');
+ 
   // wersja 1
   // const handelOnClick = ()=>{
   //   setText(text + ' dodaj i')
   // }
   // wersja 2
-  const handelOnClick = () => setText(`${text} dodaj i`);
+  const handelOnClick = () => setText(`${text} i dodaj`);
 
   return (
     <div>
@@ -67,6 +69,7 @@ const App = () => {
         doadaj A
       </button>
       <h1>{text}</h1>
+      <img src={img} alt="iphone" width="150"/>
       <Footer />
     </div>
   );
