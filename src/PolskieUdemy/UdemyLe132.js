@@ -49,18 +49,23 @@ const Footer = (props) => (
 
 // button onClick and handle
 
-
+// componet funkcyjna
 const App = () => {
-  const [text,setText] = React.useState('')
-  const handelOnClick = ()=>{
-    // const letter = 'stop';
-    setText(text + ' Dodaj i ')
-  }
+  const [text, setText] = React.useState("");
+  // wersja 1
+  // const handelOnClick = ()=>{
+  //   setText(text + ' dodaj i')
+  // }
+  // wersja 2
+  const handelOnClick = () => setText(`${text} dodaj i`);
+
   return (
     <div>
       <Header />
       <ShoppingList />
-      <button style={{margin:'2rem'}} onClick={handelOnClick}>doadaj A</button>
+      <button style={{ margin: "2rem" }} onClick={handelOnClick}>
+        doadaj A
+      </button>
       <h1>{text}</h1>
       <Footer />
     </div>
