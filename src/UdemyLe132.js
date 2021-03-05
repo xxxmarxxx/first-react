@@ -36,16 +36,14 @@ class ShoppingList extends React.Component {
     );
   }
 }
-
-class ItemsList extends React.Component {
-  render() {
-    return (
-      <li>
-        {this.props.name} - {this.props.example}{" "}
-      </li>
-    );
-  }
-}
+// to zmiana mozna pomonac return
+const ItemsList = (props) => {
+  return (
+    <li>
+      {props.name} - {props.example}
+    </li>
+  );
+};
 
 class Footer extends React.Component {
   state = {};
