@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
-// import Udemy from './UdemyLe130_hook';
-import Udemy2 from './UdemyLe132';
+// import Udemy from '.PolskieUdemy/UdemyLe130_hook';
+import Udemy2 from './PolskieUdemy/UdemyLe132';
 
 
 ReactDOM.render(
