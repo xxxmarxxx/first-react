@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../assets/img.png";
+import Links from '../Links';
 
 class Header extends React.Component {
   state = {
@@ -72,16 +73,19 @@ const App = () => {
       </button>
       <h1>{text}</h1>
       <img src={img} alt="iphone" width="150" style={{margin:'2rem'}} />
-<div>
+<div style={{margin:'1rem'}}>
       <input
-      style={{margin:'1rem'}}
+      style={{margin:'1rem', padding:'5px',width:'150px', height:'30px', border:'none'}}
+      
         value={value}
         placeholder="write..."
         onChange={handleOnChange}
         type="text"
       />
       <button onClick={handleOnClick2} className='btn'>Reset</button>
+      <h1>{value.toUpperCase()}</h1>
 </div>
+<Links/>
       <Footer />
     </div>
   );
