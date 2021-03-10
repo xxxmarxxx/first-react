@@ -5,20 +5,19 @@ const ADDITION = "addition";
 const RESET = "reset";
 
 const Counter = (props) => {
-  const startValue = 0;
-  const result1 = { startValue };
+  
   const [count, setCount] = React.useState(0);
   const [result, setResult] = React.useState(props.result);
 
   const handleMathClick = (type, number = 1) => {
     if (type === SUBTRACTION) {
       setCount(count + 1);
-      setResult(result + number);
+      setResult(result - number);
     } else if (type === RESET) {
-      setCount(count + 1);
+      setCount(count);
       setResult(props.result);
     } else if (type === ADDITION) {
-      setCount(count - 1);
+      setCount(count + 1);
       setResult(result + number);
     }
   };
@@ -80,7 +79,7 @@ const ResultPanel = ({count,result}) => {
   );
 };
 
-// const startValue = 0;
+const startValue = 0;
 // const result = { startValue };
 
 export default Counter;
