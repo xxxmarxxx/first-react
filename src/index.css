@@ -89,6 +89,13 @@ p {
 }
 /* more global css */
 
+.center{
+  display: flex;
+  margin: 30px ,auto;
+
+  
+}
+
 .btn {
   text-transform: uppercase;
   background: var(--clr-primary);
