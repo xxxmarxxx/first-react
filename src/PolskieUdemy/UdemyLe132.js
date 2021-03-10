@@ -68,8 +68,8 @@ const App = () => {
     <div>
       <Header />
       <ShoppingList />
-      <button style={{ margin: "2rem" }} onClick={handelOnClick}>
-        doadaj A
+      <button style={{ margin: "2rem", padding:'8px', width:'100px',cursor:'pointer' }} onClick={handelOnClick}>
+        add
       </button>
       <h1>{text}</h1>
       <img src={img} alt="iphone" width="150" style={{margin:'2rem'}} />
