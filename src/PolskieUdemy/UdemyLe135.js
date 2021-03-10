@@ -1,12 +1,12 @@
 import React from "react";
 
-const SUBTRACTION = 'subtraction';
-const ADDITION = 'addition';
-const RESET = 'reset';
+const SUBTRACTION = "subtraction";
+const ADDITION = "addition";
+const RESET = "reset";
 
 const Counter = (props) => {
-    const startValue = 0;
-    const result1 = { startValue }
+  const startValue = 0;
+  const result1 = { startValue };
   const [count, setCount] = React.useState(0);
   const [result, setResult] = React.useState(props.result);
 
@@ -37,10 +37,7 @@ const Counter = (props) => {
         type={SUBTRACTION}
         click={handleMathClick}
       />
-      <MathButton 
-      name="Reset" 
-      type={RESET} 
-      click={handleMathClick} />
+      <MathButton name="Reset" type={RESET} click={handleMathClick} />
       <MathButton
         name="+1"
         number={1}
@@ -58,23 +55,27 @@ const Counter = (props) => {
   );
 };
 
-const MathButton = (props) => {
-  const number = parseInt(props.Number);
+const MathButton = ({ click, name, number, type }) => {
+  const handleClick = () => click(type,number);
   return (
-    <button className='btn' onClick={() => props.click(props.type, number)}>
-      {props.name}
+      
+    <button onClick={handleClick} className='btn'>
+      {name}
     </button>
+      
   );
 };
 
-const ResultPanel = (props) => {
+const ResultPanel = ({count,result}) => {
+    const addInfo = count > 10 ? (<span>. Przeciazenie processora </span>): null
   return (
     <>
-      <h1 style={{margin:'10px', fontSize:'30px',textAlign:'center'}}>
-        Liczby klikniac: {props.count}
-        {props.count > 10 ? <span>. Przeciazenie processora </span> : null}{" "}
+      <h1 style={{ margin: "10px", fontSize: "30px", textAlign: "center" }}>
+        Liczby klikniac: {count} {addInfo}
       </h1>
-      <h1 style={{margin:'10px', fontSize:'30px',textAlign:'center'}}>wynik: {props.result}</h1>
+      <h2 style={{ margin: "10px", fontSize: "30px", textAlign: "center" }}>
+        wynik: {result}
+      </h2>
     </>
   );
 };
