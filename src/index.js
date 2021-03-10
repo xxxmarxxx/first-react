@@ -12,8 +12,8 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <Udemy2 /> */}
-    <Udemy135 result={startValue}/>
-    
+    {/* <Udemy135 result={startValue}/> */}
+    <Hook/>
   </React.StrictMode>,
   document.getElementById('root')
 );
