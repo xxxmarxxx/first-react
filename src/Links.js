@@ -3,7 +3,7 @@ import './App.css';
 
 const links = () => {
     const handleLink = ()=>{
-        const aaa = "https://sass-lang.com/documentation/at-rules/mixin";
+        // const aaa = "https://sass-lang.com/documentation/at-rules/mixin";
         
     }
     return ( 
