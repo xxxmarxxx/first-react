@@ -116,7 +116,7 @@ p {
   background: var(--clr-primary-light);
 }
 .btn_mar {
-  margin: 20px 0;
+  margin: 20px 20px;
   text-transform: uppercase;
   background: var(--clr-primary);
   color: var(--clr-white);
