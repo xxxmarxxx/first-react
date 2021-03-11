@@ -9,7 +9,7 @@ import Hook from "./PolskieUdemy/Hook";
 import Hook2 from "./PolskieUdemy/Hook_2";
 import Hook3 from "./PolskieUdemy/Hook_3";
 import Test from "./PolskieUdemy/test";
-import Le140 from './PolskieUdemy/Le140'
+import Le140 from './PolskieUdemy/LE140/App'
 
 // const startValue = 0;
 ReactDOM.render(
