@@ -79,7 +79,7 @@ const ResultPanel = ({count,result}) => {
   );
 };
 
-const startValue = 0;
+// const startValue = 0;
 // const result = { startValue };
 
 export default Counter;
