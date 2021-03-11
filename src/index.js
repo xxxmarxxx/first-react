@@ -9,6 +9,7 @@ import Hook from "./PolskieUdemy/Hook";
 import Hook2 from "./PolskieUdemy/Hook_2";
 import Hook3 from "./PolskieUdemy/Hook_3";
 import Test from "./PolskieUdemy/test";
+import Le140 from './PolskieUdemy/Le140'
 
 // const startValue = 0;
 ReactDOM.render(
@@ -20,6 +21,7 @@ ReactDOM.render(
     <Hook2 />
     <Hook3 />
     <Test />
+    <Le140 />
   </React.StrictMode>,
   document.getElementById("root")
 );
