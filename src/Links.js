@@ -9,7 +9,7 @@ const links = () => {
     return ( 
         <div>
             <button className="btn" style={{margin:'2rem'}} onClick={handleLink}>link</button>
-            <a href="https://sass-lang.com/documentation/at-rules/mixin">sass</a>
+            {/* <a href="https://sass-lang.com/documentation/at-rules/mixin">sass</a> */}
         </div>
      );
 }
