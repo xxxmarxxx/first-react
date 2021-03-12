@@ -11,7 +11,7 @@ import "./index.css";
 // import Test from "./PolskieUdemy/test";
 import Le140 from './PolskieUdemy/LE140/App'
 
-// const startValue = 0;
+//* const startValue = 0;
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
