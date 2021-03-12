@@ -1,18 +1,19 @@
 import React, { PureComponent } from "react";
 
-import { Le140Context } from "./AppContext";
+import { AppContext } from "./AppContext";
 
 class UserInfo extends PureComponent {
   state = {};
   render() {
     return (
-      <Le140Context.Consumer>
-        {(props) => (
+      <AppContext.Consumer>
+        {({ isUserLogged }) => (
           <div>
-            <p>User is ...</p>
+            {console.log(isUserLogged)}
+            <p>User is {isUserLogged ? "logged" : "no logged"}</p>
           </div>
         )}
-      </Le140Context.Consumer>
+      </AppContext.Consumer>
     );
   }
 }
