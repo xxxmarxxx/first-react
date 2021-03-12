@@ -90,10 +90,11 @@ p {
 /* more global css */
 
 .center{
-  display: flex;
+  /* display:flex; */
+  display: block;
   margin: 30px ,auto;
+  text-align: center;
 
-  
 }
 
 .btn {
