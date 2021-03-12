@@ -10,7 +10,16 @@ class UserInfo extends PureComponent {
         {({ isUserLogged }) => (
           <div>
             {console.log(isUserLogged)}
-            <p>User is {isUserLogged ? "logged" : "no logged"}</p>
+            <p
+              style={{
+                margin: "40px",
+                border: "solid 1px #fff",
+                backgroundColor: "#eeeee5",
+              }}
+            >
+              User is
+              {isUserLogged ? "logged in" : "not logged in"}
+            </p>
           </div>
         )}
       </AppContext.Consumer>
