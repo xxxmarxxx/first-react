@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import Button from "./Button";
 import UserInfo from "./UserInfo";
 
-import { AppContext, defaultObject } from "./AppContext";
+// import { AppContext, defaultObject } from "./AppContext";
+import AppProvider from "./AppContext";
 
 //* jak sie korzysta z context
 //! class function component
@@ -58,27 +59,19 @@ import { AppContext, defaultObject } from "./AppContext";
 // export default App;
 //! change to array function
 const App = () => {
-  const [isUserLogged, setIsUserLogged] = useState(defaultObject.isUserLogged);
-  const [isUserAdult, setIsUserAdult] = useState(true);
+  // const [isUserLogged, setIsUserLogged] = useState(defaultObject.isUserLogged);
+  // const [isUserAdult, setIsUserAdult] = useState(true);
 
-  const toggleLoggedState = () => setIsUserLogged((prevValue) => !prevValue);
-  const toggleAdultState = () => setIsUserAdult((prevValue) => !prevValue);
+  // const toggleLoggedState = () => setIsUserLogged((prevValue) => !prevValue);
+  // const toggleAdultState = () => setIsUserAdult((prevValue) => !prevValue);
 
   return (
     <div className="center">
-      <AppContext.Provider value={{ isUserLogged, toggleLoggedState }}>
+      <AppProvider >
         <UserInfo />
         <Button />
-      </AppContext.Provider>
-      <AppContext.Provider
-        value={{
-          isUserLogged: isUserAdult,
-          toggleLoggedState: toggleAdultState,
-        }}
-      >
-        <UserInfo />
-        <Button />
-      </AppContext.Provider>
+      </AppProvider>
+     
       <h1>on/off Logged</h1>
       <p>Start editing to see some magic happen </p>
     </div>
