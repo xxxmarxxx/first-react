@@ -9,9 +9,9 @@ import "./index.css";
 // import Hook2 from "./PolskieUdemy/Hook_2";
 // import Hook3 from "./PolskieUdemy/Hook_3";
 // import Test from "./PolskieUdemy/test";
-// import Le140 from './PolskieUdemy/LE140/App';
+import Le140 from './PolskieUdemy/LE140/App';
 // import Block from './PolskieUdemy/HTML/block_inline';
-import Flexbox from './PolskieUdemy/HTML/flexbox';
+// import Flexbox from './PolskieUdemy/HTML/flexbox';
 
 
 //* const startValue = 0;
@@ -24,9 +24,9 @@ ReactDOM.render(
     <Hook2 />
     <Hook3 />
     <Test /> */}
-    {/* <Le140 /> */}
+    <Le140 />
     {/* <Block /> */}
-    <Flexbox />
+    {/* <Flexbox /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
