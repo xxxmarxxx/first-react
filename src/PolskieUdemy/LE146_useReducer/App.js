@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useReducer } from "react";
-import CourseInfo from './CourseInfo'
+import CourseInfo from "./CourseInfo";
+import Form from "./Form";
+
 const marArray = [
   {
     id: "aa2561a3-861a-4d3b-bf32-deeca65c1dab",
@@ -35,23 +37,40 @@ const marArray = [
 const marReducer = (state, action) => {
   switch (action.type) {
     case "ADD":
-      return;
+      return [...state, action.newCourse];
     case "REMOVE":
-      return state.filter(course => course.id !== action.id);
+      return state.filter((course) => course.id !== action.id);
     case "FETCH":
-      return;
+      return action.data;
     default:
       throw new Error("Ooops something went wrong!");
   }
 };
 
-const App = () => {
-  const [state, dispatch] = useReducer(marReducer, marArray);
+const fetchAsyncData = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+};
 
-  const coursesElement = state.map(...marArray)
+const App = () => {
+  const [state, dispatch] = useReducer(marReducer, []);
+
+  const asyncFetch = async () => {
+    await fetchAsyncData();
+    dispatch({ type: "FETCH", data: marArray });
+  };
+
+  useEffect(() => {
+    asyncFetch();
+  }, []);
+
+  const coursesElement = state.map((course) => (
+    <CourseInfo key={course.id} onClickHandler={dispatch} {...course} />
+  ));
+
   return (
     <div>
-      <CourseInfo />
+      {coursesElement}
+      <Form addHandler={dispatch}/>
     </div>
   );
 };
