@@ -14,7 +14,8 @@ import "./index.css";
 // import Flexbox from './PolskieUdemy/HTML/flexbox';
 // import App from './PolskieUdemy/LE144/App'
 // import App from './PolskieUdemy/LE145/App'
-import App from './PolskieUdemy/LE146_useReducer/App';
+// import App from './PolskieUdemy/LE146_useReducer/App';
+import App from './PolskieUdemy/LE148_useMemo/App';
 
 
 //* const startValue = 0;
