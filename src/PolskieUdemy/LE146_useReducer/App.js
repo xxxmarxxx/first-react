@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import CourseInfo from "./CourseInfo";
 import Form from "./Form";
 
@@ -31,7 +31,7 @@ const marArray = [
 
 // obiekt akcji
 // {
-//     type: 'ADD', // obowiazkowo
+//     type: 'ADD', // musi byc
 // }
 
 const marReducer = (state, action) => {
@@ -43,7 +43,7 @@ const marReducer = (state, action) => {
     case "FETCH":
       return action.data;
     default:
-      throw new Error("Ooops something went wrong!");
+      throw new Error("Oops something went wrong!");
   }
 };
 
