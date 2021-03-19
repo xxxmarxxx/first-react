@@ -17,7 +17,8 @@ import "./index.css";
 // import App from './PolskieUdemy/LE146_useReducer/App';
 // import App from './PolskieUdemy/LE148_useMemo/App';
 // import App from './PolskieUdemy/LE151_useCallback/App';
-import App from './PolskieUdemy/LE152_useLayoutEffect/App';
+// import App from './PolskieUdemy/LE152_useLayoutEffect/App';
+import App from './PolskieUdemy/LE153_useHistory/App';
 
 
 //* const startValue = 0;
