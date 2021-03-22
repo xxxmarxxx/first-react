@@ -9,12 +9,14 @@ import TypeScript from "./TypeScript";
 const Content = () => {
   return (
     <main>
-      <Switch>
+      <Switch> 
+        <div className="center">
         <Route component={Mobx} path="/Mobx" />
         <Route component={ReactJS} path="/react" />
         <Route component={Redux} path="/redux" />
         <Route component={TypeScript} path="/typescript/:message" />
         <Redirect from="*" to="/" />
+      </div>
       </Switch>
     </main>
   );
