@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Form = ({ author = "", comment = "", id, rate = 0 }) => {
+const Form = ({ author = "", comment = "", callback, id, rate = 0 }) => {
   const [authorInput, setAuthorInput] = useState(author);
   const [rateInput, setRateInput] = useState(rate);
   const [commentInput, setCommentInput] = useState(comment);
@@ -20,10 +20,14 @@ const Form = ({ author = "", comment = "", id, rate = 0 }) => {
          author: authorInput,
          comment: commentInput,
          id,
-         rate: rateInput, 
+         rate: Number(rateInput), 
       }
       console.log(rateObject);
-      id ? console.log('edycja oceny'): console.log('dodaj ocene');;
+      id ? console.log('edycja oceny'): console.log('dodaj ocene');
+
+      if(id){
+            callback()
+      }
   }
 
   return (
