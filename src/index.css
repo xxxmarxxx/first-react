@@ -134,6 +134,11 @@ li {
   text-decoration: none;
 }
 
+form{
+  margin: 1rem;
+  padding: 2rem;
+}
+
 .nav_link {
   padding: 20px;
   margin: 20px;
