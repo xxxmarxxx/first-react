@@ -1,12 +1,18 @@
-import React from 'react';
+import React from "react";
+import { Provider } from "react-redux";
+
+import Form from './Form';
+import store from "./store/store";
 
 const App = () => {
-    return ( 
-        <div className='center'>
-            <h1>Hallo StackBlitz</h1>
-            <p>Start editing</p>
-        </div>
-     );
-}
- 
+  return (
+    <Provider store={store}>
+      <div className="center">
+       <Form />
+        <p>Programowanie z redux</p>
+      </div>
+    </Provider>
+  );
+};
+
 export default App;
