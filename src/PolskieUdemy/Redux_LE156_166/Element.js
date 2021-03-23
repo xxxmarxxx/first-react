@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from './Form';
+
 const Element = ({ author, comment, id, rate }) => {
   const [isVisibleForm, setIsVisibleForm] = useState(false);
   const toggleElements = () => setIsVisibleForm((prev) => !prev);
