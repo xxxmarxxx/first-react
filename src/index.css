@@ -124,17 +124,40 @@ a:hover {
 }
 
 ul {
+  display: flex;
+  margin: 1rem ;
+  padding: 2rem;
   list-style-type: none;
   text-decoration: none;
-  background-color: rgb(196, 196, 221);
+  background-color: rgb(218, 221, 196);
+  border-radius: 20px;
 
+}
+input{
+  display: inline-block;
+  justify-content: flex-end;
+  align-content: flex-end;
+  width: 200px;
+  height: 30px;
+  margin: 0.5rem;
+  padding: 1rem;
+  border: none;
+}
+.box{
+  display: flex;
+  margin: 0  auto;
 }
 
 li {
+  margin: auto;
+  text-align: center;
   text-decoration: none;
+  background-color: #a5bacd;
+  border-radius: 1rem;
 }
 
 form{
+  
   margin: 1rem;
   padding: 2rem;
 }
