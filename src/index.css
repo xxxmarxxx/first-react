@@ -125,6 +125,7 @@ a:hover {
 
 ul {
   display: flex;
+  flex-direction: column;
   margin: 1rem ;
   padding: 2rem;
   list-style-type: none;
@@ -137,6 +138,8 @@ input{
   display: inline-block;
   justify-content: flex-end;
   align-content: flex-end;
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
   width: 200px;
   height: 30px;
   margin: 0.5rem;
@@ -149,7 +152,7 @@ input{
 }
 
 li {
-  margin: auto;
+  margin:10px auto;
   text-align: center;
   text-decoration: none;
   background-color: #a5bacd;
