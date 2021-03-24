@@ -9,11 +9,11 @@ import "./index.css";
 // import Hook2 from "./PolskieUdemy/Hook_2";
 // import Hook3 from "./PolskieUdemy/Hook_3";
 // import Test from "./PolskieUdemy/test";
-// import Le140 from './PolskieUdemy/LE140/App';
+// import Le140 from './PolskieUdemy/LE140_React_Contex/App';
 // import Block from './PolskieUdemy/HTML/block_inline';
 // import Flexbox from './PolskieUdemy/HTML/flexbox';
-// import App from './PolskieUdemy/LE144/App'
-// import App from './PolskieUdemy/LE145/App'
+// import App from './PolskieUdemy/LE144_createRef/App'
+// import App from './PolskieUdemy/LE145_useRef/App'
 // import App from './PolskieUdemy/LE146_useReducer/App';
 // import App from './PolskieUdemy/LE148_useMemo/App';
 // import App from './PolskieUdemy/LE151_useCallback/App';
