@@ -72,6 +72,7 @@ h4 {
 p {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 800px) {
