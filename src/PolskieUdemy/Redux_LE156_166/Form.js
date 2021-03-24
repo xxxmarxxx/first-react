@@ -4,7 +4,6 @@ import { useDispatch } from "react-redux";
 import { addRate, editRate } from "./Actions/appActions";
 
 const Form = ({ author = "", comment = "", callback, id, rate = 0 }) => {
-
   const [authorInput, setAuthorInput] = useState(author);
   const [rateInput, setRateInput] = useState(rate);
   const [commentInput, setCommentInput] = useState(comment);
@@ -39,32 +38,36 @@ const Form = ({ author = "", comment = "", callback, id, rate = 0 }) => {
   return (
     <form onSubmit={handleOnSubmit}>
       <div className="box">
-      <div>
-        <label>
-          Author: 
-          <input
-            onChange={handleChangeAuthor}
-            type="text"
-            value={authorInput}
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          ocena:
-          <input onChange={handleChangeRate} type="number" value={rateInput} />
-        </label>
-      </div>
-      <div>
-        <label>
-          Komentarz:
-          <input
-            onChange={handleCommentChange}
-            type="text"
-            value={commentInput}
-          />
-        </label>
-      </div>
+        <div>
+          <label>
+            Author:
+            <input
+              onChange={handleChangeAuthor}
+              type="text"
+              value={authorInput}
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            ocena:
+            <input
+              onChange={handleChangeRate}
+              type="number"
+              value={rateInput}
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Komentarz:
+            <input
+              onChange={handleCommentChange}
+              type="text"
+              value={commentInput}
+            />
+          </label>
+        </div>
       </div>
       <button type="submit" className="btn_mar">
         {id ? "edycja oceny" : "dodaj ocene"}
