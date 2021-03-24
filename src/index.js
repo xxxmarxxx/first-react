@@ -20,7 +20,8 @@ import "./index.css";
 // import App from './PolskieUdemy/LE152_useLayoutEffect/App';
 // import App from './PolskieUdemy/LE153_useHistory/App';
 // import App from './PolskieUdemy/LE154_useLocation/App';
-import App from './PolskieUdemy/Redux_LE156_166/App';
+// import App from './PolskieUdemy/Redux_LE156_166/App';
+import App from './PolskieUdemy/MobX/App';
 
 
 //* const startValue = 0;
