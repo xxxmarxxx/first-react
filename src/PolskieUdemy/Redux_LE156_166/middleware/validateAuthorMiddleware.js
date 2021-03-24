@@ -2,7 +2,7 @@ import { ADD } from "../Actions/appActions";
 
 export const validateAuthorMiddleware = (store) => (next) => (action) => {
   // console.log(action);
-  if (action.type === ADD && !action.payload.author) {
+  if (action.type === ADD && !action.payload.author.length) {
     console.warn("Author nie ma imienia i nazwiska");
     return;
   }
