@@ -21,8 +21,9 @@ import "./index.css";
 // import App from './PolskieUdemy/LE153_useHistory/App';
 // import App from './PolskieUdemy/LE154_useLocation/App';
 // import App from './PolskieUdemy/Redux_LE156_166/App';
-import App from './PolskieUdemy/MobX/App';
-// import App from './PolskieUdemy/Mobx2/App';
+// import App from './PolskieUdemy/MobX/App';
+import App from './PolskieUdemy/Mobx2/App';
+
 
 
 //* const startValue = 0;
@@ -39,6 +40,7 @@ ReactDOM.render(
     {/* <Block /> */}
     {/* <Flexbox /> */}
     <App />
+   
   </React.StrictMode>,
   document.getElementById("root")
 );
